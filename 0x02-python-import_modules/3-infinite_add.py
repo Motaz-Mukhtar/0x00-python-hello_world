@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import sys
+if __name__ == "__main__":
+    import sys
 length = len(sys.argv)
 num_sum = 0
 i = 1
