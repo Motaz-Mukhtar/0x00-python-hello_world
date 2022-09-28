@@ -6,7 +6,7 @@ length = len(sys.argv) - 1
 
 if length == 1:
     print("{:d} argument:".format(length))
-elif len(sys.argv) == 0:
+elif len(sys.argv) == 1:
     print("0 arguments.")
 else:
     print("{:d} arguments:".format(length))
