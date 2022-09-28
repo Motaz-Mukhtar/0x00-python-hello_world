@@ -9,4 +9,3 @@ while i < length:
     num_sum += int(sys.argv[i])
     i += 1
 print(num_sum)
-
