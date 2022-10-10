@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 def safe_print_integer(value):
     boolean = True
@@ -7,3 +7,4 @@ def safe_print_integer(value):
     except ValueError:
         boolean = False
     return boolean
+
