@@ -4,13 +4,24 @@
 
 class Square:
     """Initialize a New square class"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """__init__ Function
 
         Args:
             size (int): The size of new Square
         """
         self.__size = size
+        self.__position = position
+
+    @property
+    def position(self):
+        """retrieve position"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
@@ -45,10 +56,8 @@ class Square:
             print("")
         else:
             for i in range(self.__size):
-                for j in range(0, self.__position[0]):
+                for k in range(0, self.__position[0]):
                     print(" ", end="")
-                for k in range(self.__size):
+                for j in range(self.__size):
                     print("#", end="")
-                    
                 print("")
-
