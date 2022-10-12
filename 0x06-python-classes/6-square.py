@@ -20,6 +20,13 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Initialize a new position
+
+
+        Args:
+            value (int): The position of the new square
+        """
+        self.__position = value
         if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -30,12 +37,13 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Initialize a new Square.
+        """Initialize a new size Square.
 
 
         Args:
             value (int): The size of new square
         """
+        self.__size = value
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
