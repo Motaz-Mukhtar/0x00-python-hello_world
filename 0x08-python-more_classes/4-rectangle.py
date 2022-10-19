@@ -57,6 +57,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
+        """Find the Perimeter of the Rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
@@ -73,3 +74,5 @@ class Rectangle:
 
         return "".join(rect)
 
+    def __repr__(self):
+        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
