@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Square Class"""
-Rectangle = __improt__('9-Rectangle').Rectangle
+Rectangle = __import__('9-Rectangle').Rectangle
 
 
 class Square(Rectangle):
