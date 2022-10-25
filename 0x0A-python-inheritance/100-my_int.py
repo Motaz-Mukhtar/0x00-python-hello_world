@@ -11,7 +11,7 @@ class MyInt(int):
         """
         self.__x = x
 
-    def __eq__(self, y)
+    def __eq__(self, y):
         return self.__x != y
 
     def __ne__(self, y):
