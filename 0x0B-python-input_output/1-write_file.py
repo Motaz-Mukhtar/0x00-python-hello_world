@@ -13,6 +13,3 @@ def write_file(filename="", text=""):
         myFile.write(text)
         chrNum = myFile.tell()
     return chrNum
-
-nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
-print(nb_characters)
