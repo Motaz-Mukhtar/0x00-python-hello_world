@@ -10,6 +10,6 @@ try:
 except FileNotFoundError:
     myList = []
 
-    myList.extend(sys.argv[1:])
+myList.extend(sys.argv[1:])
 
 save_to_json_file(myList, 'add_item.json')
