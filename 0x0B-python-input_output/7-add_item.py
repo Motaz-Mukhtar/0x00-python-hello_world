@@ -13,9 +13,6 @@ try:
 except FileNotFoundError:
     myList = []
 
-for i in sys.argv:
-    if i == sys.argv[0]:
-        continue
-    myList.append(i)
+    myList.extend(sys.argv[1:])
 
 save_to_json_file(myList, 'add_item.json')
