@@ -18,14 +18,24 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieves a dict representation of a student
-           
+
            Args:
                 attrs (list): list of attributes
             Return:
                 Dictionary
         """
-        if (type(attrs) == stra and
+        if (type(attrs) == list and
                 all(type(i) == str for i in attrs)):
             return {j: getattr(self, j) for j in attrs if hasattr(self, j)}
         else:
             return self.__dict__
+
+    def reload_from_json(self, json):
+        """replaces all attributres of Student instance
+
+            Args:
+                json (dict): values of the new attributes
+        """
+        for i in json:
+            if hasattr(self, i) and type(json) == dict:
+                setattr(self, i, json[i])
