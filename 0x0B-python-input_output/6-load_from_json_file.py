@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-"""Creates an Ojbect from JSON file"""
+# 6-load_from_json_file
+"""Defines a JSON file reading fucntion"""
 import json
 
 
 def load_from_json_file(filename):
-    """Createan Object from filename
-
-        Args:
-            filename (str): JSON file name
-    """
+    """Create Object from JSON file"""
     with open(filename, encoding="utf-8") as myFile:
         string = myFile.read()
         return json.loads(string)
