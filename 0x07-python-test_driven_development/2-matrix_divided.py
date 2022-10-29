@@ -1,9 +1,20 @@
 #!/usr/bin/python3
-"""Define a Function"""
+"""Define a Function that divided the matrix elements"""
 
 
 def matrix_divided(matrix, div):
-    """return the div of all elements of a matrix"""
+    """return the div of all elements of a matrix
+
+        Args:
+            matrix (list): list of lists
+            div (int): number of division
+
+        Raises:
+            TypeError: if matrix is not lists of lsits,
+                    or the has no same size, or Non-Number,
+                    or if the divison is not int or float,
+            ZeroDivisionError: if the div equal to Zero
+    """
     if (not isinstance(matrix, list) or matrix == [] or
         all(not isinstance(row, list) for row in matrix) or
         all(not isinstance(num, int) or not isinstance(num float)
@@ -20,4 +31,4 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return [list(map(lambda x : round(x / div, 2), row)) for row in matrix]
+    return [list(map(lambda x:round(x / div, 2), row)) for row in matrix]
