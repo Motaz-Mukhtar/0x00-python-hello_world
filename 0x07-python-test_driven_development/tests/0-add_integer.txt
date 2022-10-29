@@ -4,20 +4,26 @@
 How to Use 0-add_integer.py
 ===========================
 
+Usage
+=====
+
 add_integer(a, b=98) must Return the addition of two Number,it takes two Argumnet
 
 ::
 	>>> add_integer = __import__('0-add_integer').add_integer
+::
 	>>> add_integer(1, 2)
 	3
+::
 	>>> add_integer(1, -2)
 	-1
+::
 	>>> add_integer(1, "2")
 	Trackback (most recent call last):
 	...
 	TypeError: b must be an integer
+::
 	>>> add_integer("1", 2)
 	Trackback (most recent call last):
 	...
 	TypeError: a must be an integer
-::
