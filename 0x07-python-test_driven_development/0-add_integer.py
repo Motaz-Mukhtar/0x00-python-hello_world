@@ -3,9 +3,14 @@
 
 
 def add_integer(a, b=98):
-    """Return the summation of two integers"""
-    if not type(a) == int or not type(a) == float:
+    """Return the summation of two integers
+
+    Raises:
+        TypeError: if either of a or b not
+            int or float
+    """
+    if not isinstance(a, int) and not isinstance(b, float):
         raise TypeError("a must be an integer")
-    if not type(b) == int or not type(b) == float:
+    if not type(b) == int and not type(b) == float:
         raise TypeError("b must be an integer")
     return (int(a) + int(b))
