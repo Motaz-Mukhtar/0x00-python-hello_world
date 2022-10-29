@@ -1,0 +1,20 @@
+# 0-add_integer.txt
+
+"""add_integer(a, b=98) must Return the addition of two Number,
+	it takes two Argumnet"""
+
+	"""
+	>>> from ../add_integer import add_integer
+	>>> add_integer(1, 50)
+	51
+	>>> add_integer(20, 10)
+	30
+	>>> add_integer(4, "school")
+	Trackback (most recent call last):
+	...
+	TypeError: b must be an integer
+	>>> add_integer("cool", 16)
+	Trackback (most recent call last):
+	...
+	TypeError: a must be an integer
+	"""
