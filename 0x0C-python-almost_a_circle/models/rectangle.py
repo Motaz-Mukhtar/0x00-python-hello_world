@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+# rectangle.py
 """Define Rectangle Class"""
-from typing import Type
+from pickletools import string4
 from base import Base
 
 
@@ -99,3 +100,41 @@ class Rectangle(Base):
         s = f"[Rectangle] ({self.id}) {self.__x}"
         st = s + f"/{self.__y} - {self.__width}"
         return st + f"/{self.__height}"
+
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute:
+
+            Args:
+                *args (list): the argument
+                **kwargs (dcit): key/value
+
+            1st argument should be the id attribute
+            2nd argument should be the width attribute
+            3rd argument should be the height attribute
+            4th argument should be the x attribute
+            5th argument should be the y attribute
+        """
+        #**kwargs
+        if kwargs != None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        # *args
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            elif i == 1:
+                self.__width = args[i]
+            elif i == 2:
+                self.__height = args[i]
+            elif i == 3:
+                self.__x = args[i]
+            elif i == 4:
+                self.__y = args[i]
+        
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle instance"""
+        string1 = "'x': {}, 'y': {}, ".format(self.__x, self.__y)
+        string2 = "'id': {}, 'height': {}, ".format(self.id, self.__height)
+        strgin4 = string1 + string2 + "'width': {}".format(self.__width)
+        string5 = '{' + strgin4 + '}'
+        return eval(string5)
