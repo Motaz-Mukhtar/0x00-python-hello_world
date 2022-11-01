@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # rectangle.py
 """Define Rectangle Class"""
-from pickletools import string4
 from base import Base
 
 

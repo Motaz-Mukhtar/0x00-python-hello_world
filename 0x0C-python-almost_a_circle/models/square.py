@@ -1,11 +1,5 @@
 #!/usr/bin/python3
 """Square Class"""
-from asyncio import protocols
-from ctypes import sizeof
-from ctypes.wintypes import SIZE
-from msilib.schema import PublishComponent
-from multiprocessing.sharedctypes import Value
-from turtle import width
 from rectangle import Rectangle
 
 
