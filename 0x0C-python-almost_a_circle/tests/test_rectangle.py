@@ -3,7 +3,7 @@
 """Test for the Rectangle Class on rectangle.py File"""
 import sys
 import io
-# sys.path.insert(1, "C:/Users/admin/Desktop/taifoor jalon/alx-higher_level_programming/0x0C-python-almost_a_circle")
+sys.path.insert(1, "/root/alx-higher_level_programming/0x0C-python-almost_a_circle")
 import unittest
 from models.rectangle import Rectangle
 
