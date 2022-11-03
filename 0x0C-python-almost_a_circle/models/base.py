@@ -42,7 +42,7 @@ class Base():
             Args:
                 list_objs (list): list of objects
         """
-        filename = clas.__name__ + ".json"
+        filename = cls.__name__ + ".json"
 
         with open(filename, "w") as json_file:
             if list_objs is None:
