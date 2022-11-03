@@ -98,7 +98,8 @@ class Rectangle(Base):
         """Return The __str__ of the Rectangle"""
         s = f"[Rectangle] ({self.id}) {self.__x}"
         st = s + f"/{self.__y} - {self.__width}"
-        return st + f"/{self.__height}"
+        string = st + f"/{self.__height}"
+        return string
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute:
@@ -114,26 +115,29 @@ class Rectangle(Base):
             5th argument should be the y attribute
         """
         #**kwargs
-        if kwargs != None:
+        if kwargs is not None and len(args) == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
         # *args
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[i]
-            elif i == 1:
-                self.__width = args[i]
-            elif i == 2:
-                self.__height = args[i]
-            elif i == 3:
-                self.__x = args[i]
-            elif i == 4:
-                self.__y = args[i]
+        elif len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.__width = args[i]
+                elif i == 2:
+                    self.__height = args[i]
+                elif i == 3:
+                    self.__x = args[i]
+                elif i == 4:
+                    self.__y = args[i]
         
     def to_dictionary(self):
-        """Returns the dictionary representation of a Rectangle instance"""
+        """Returns the dictionary representation of a 
+            Rectangle instance"""
         string1 = "'x': {}, 'y': {}, ".format(self.__x, self.__y)
         string2 = "'id': {}, 'height': {}, ".format(self.id, self.__height)
         strgin4 = string1 + string2 + "'width': {}".format(self.__width)
         string5 = '{' + strgin4 + '}'
         return eval(string5)
+

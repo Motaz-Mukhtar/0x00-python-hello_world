@@ -40,11 +40,12 @@ class Square(Rectangle):
                 kwargs (dict): key/value argument
 
         """
-        if len(args) == 0:
+        # **kwargs
+        if len(args) == 0 and kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
-        if len(args) > 0:
+        # *args
+        elif len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
                     self.id = args[i]
@@ -66,17 +67,3 @@ class Square(Rectangle):
 # {'id': 1, 'x': 2, 'size': 10, 'y': 1}
 # {'id': 1, 'x': 2, 'size': 10, 'y': 1}
 
-
-if __name__ == "__main__":
-
-    s1 = Square(10, 2, 1)
-    print(s1)
-    s1_dictionary = s1.to_dictionary()
-    print(s1_dictionary)
-    print(type(s1_dictionary))
-
-    s2 = Square(1, 1)
-    print(s2)
-    s2.update(**s1_dictionary)
-    print(s2)
-    print(s1 == s2)
