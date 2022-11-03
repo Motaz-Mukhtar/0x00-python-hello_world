@@ -3,7 +3,7 @@
 """Test for the Base Class on Base.py File"""
 import sys
 import json
-sys.path.insert(1, "/root/alx-higher_level_programming/0x0C-python-almost_a_circle")
+# sys.path.insert(1, "/root/alx-higher_level_programming/0x0C-python-almost_a_circle")
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
