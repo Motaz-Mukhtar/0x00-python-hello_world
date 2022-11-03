@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 # rectangle.py
 """Define Rectangle Class"""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
     """Rectangle Class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initilize The Attributes, and set it as
             Private Attributes
@@ -140,4 +141,3 @@ class Rectangle(Base):
         strgin4 = string1 + string2 + "'width': {}".format(self.__width)
         string5 = '{' + strgin4 + '}'
         return eval(string5)
-
