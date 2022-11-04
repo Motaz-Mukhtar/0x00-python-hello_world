@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# square.py
 """Square Class"""
 from models.rectangle import Rectangle
 
@@ -6,7 +7,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x=x, y=y, id=id)
-    
+
     @property
     def size(self):
         """Get width/height Attribute"""
@@ -21,12 +22,12 @@ class Square(Rectangle):
             raise ValueError("size must be > 0")
         self.width = value
         self.heigth = value
-    
+
     def __str__(self):
         """__str__ Method for Square Class"""
         string = f"[Square] ({self.id}) {self.x}/"
         return string + f"{self.y} - {self.width}"
-    
+
     def update(self, *args, **kwargs):
         """update attribute of Square instance:
 
@@ -55,15 +56,10 @@ class Square(Rectangle):
                     self.x = args[i]
                 elif i == 3:
                     self.y = args[i]
+
     def to_dictionary(self):
         """Returns the dictionary representation of a Square instance"""
         string1 = "'id': {}, 'x': {}, ".format(self.id, self.x)
         string2 = "'size': {}, 'y': {}, ".format(self.size, self.y)
         string3 = '{' + string1 + string2 + '}'
         return eval(string3)
-
-
-
-# {'id': 1, 'x': 2, 'size': 10, 'y': 1}
-# {'id': 1, 'x': 2, 'size': 10, 'y': 1}
-

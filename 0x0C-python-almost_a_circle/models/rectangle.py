@@ -22,7 +22,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """Getter of the width Attribute"""
@@ -89,7 +89,7 @@ class Rectangle(Base):
         for k in range(self.__y):
             print()
         for i in range(self.__height):
-            for l in range(self.__x):
+            for n in range(self.__x):
                 print(" ", end="")
             for j in range(self.__width):
                 print("#", end="")
@@ -115,7 +115,7 @@ class Rectangle(Base):
             4th argument should be the x attribute
             5th argument should be the y attribute
         """
-        #**kwargs
+        # **kwargs
         if kwargs is not None and len(args) == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -132,9 +132,9 @@ class Rectangle(Base):
                     self.__x = args[i]
                 elif i == 4:
                     self.__y = args[i]
-        
+
     def to_dictionary(self):
-        """Returns the dictionary representation of a 
+        """Returns the dictionary representation of a
             Rectangle instance"""
         string1 = "'x': {}, 'y': {}, ".format(self.__x, self.__y)
         string2 = "'id': {}, 'height': {}, ".format(self.id, self.__height)
