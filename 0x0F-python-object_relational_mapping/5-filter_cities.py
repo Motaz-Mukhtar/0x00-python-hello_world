@@ -14,7 +14,4 @@ if __name__ == "__main__":
                     FROM `cities`\
                     INNER JOIN `states` ON `cities`.`state_id` = `states`.`id`\
                     ")
-    for i in curs.fetchall():
-        if i[2] == sys.argv[4]:
-            print(i[1], end=", ")
-    print()
+    print(", ".join([i[1] for i in curs.fetchall() if i[2] == sys.argv[4]]))
