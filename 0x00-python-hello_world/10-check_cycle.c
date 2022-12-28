@@ -15,7 +15,11 @@ int check_cycle(listint_t *list)
 	current = list;
 	head = list;
 	n = 0;
-	while (current != NULL)
+
+	if (current == NULL || current->next == NULL)
+		return (0);
+
+	while (current)
 	{
 		if (current == head && n != 0)
 			return (1);
