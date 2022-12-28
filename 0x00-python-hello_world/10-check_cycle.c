@@ -12,19 +12,18 @@ int check_cycle(listint_t *list)
 	listint_t *head;
 	unsigned int n;
 
-	current = list;
-	head = list;
-	n = 0;
+	current = list->next;
+	head = list->next->next;
 
 	if (current == NULL || current->next == NULL)
 		return (0);
 
-	while (current)
+	while (current != NULL && head)
 	{
 		if (current == head && n != 0)
 			return (1);
 		current = current->next;
-		n++;
+		head = head->next->next;
 	}
 	return (0);
 }
