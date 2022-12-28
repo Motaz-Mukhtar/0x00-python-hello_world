@@ -10,7 +10,6 @@ int check_cycle(listint_t *list)
 {
 	listint_t *current;
 	listint_t *head;
-	unsigned int n;
 
 	current = list->next;
 	head = list->next->next;
@@ -20,7 +19,7 @@ int check_cycle(listint_t *list)
 
 	while (current != NULL && head)
 	{
-		if (current == head && n != 0)
+		if (current == head)
 			return (1);
 		current = current->next;
 		head = head->next->next;
