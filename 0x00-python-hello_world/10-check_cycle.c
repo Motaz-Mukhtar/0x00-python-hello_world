@@ -10,18 +10,16 @@ int check_cycle(listint_t *list)
 {
 	listint_t *current;
 	listint_t *head;
-	listint_t *h;
 
 	current = list->next;
 	head = list->next->next;
-	h = list;
 
 	if (current == NULL || current->next == NULL)
 		return (0);
 
-	while (current != NULL && head)
+	while (current != NULL && head && head->next)
 	{
-		if (current == head || current == h)
+		if (current == head)
 			return (1);
 		current = current->next;
 		head = head->next->next;
