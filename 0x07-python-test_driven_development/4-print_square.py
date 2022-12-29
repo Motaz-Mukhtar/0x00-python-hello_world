@@ -3,6 +3,13 @@
 
 
 def print_square(size):
+    """
+        Prints a square with the character #.
+
+        Raises:
+            TypeError: size must be int.
+            ValueError: size must be Greater than 0.
+    """
     if type(size) != int or (type(size) == float and size < 0):
         raise TypeError("size must be an integer")
     if size < 0:
