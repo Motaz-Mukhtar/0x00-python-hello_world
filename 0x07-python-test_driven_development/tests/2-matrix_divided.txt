@@ -18,20 +18,22 @@ Normal Matrix:
 	>>> print(matrix_divided(matrix, 2))
 	[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
+	>>> matrix = [[]]
+	>>> print(matrix_divided(matrix, 2))
+	[[]]
+
 Non Number:
 =============
 ::
 	>>> matrix = [[1, "2", 3], [4, 5, 6]]
 	>>> print(matrix_divided(matrix, 2))
-	Trackback (most recent call last)
-	...
+	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 ::
         >>> matrix = [[1, 2, 3], [4, 5, 6]]
         >>> print(matrix_divided(matrix, "school"))
-        Trackback (most recent call last)
-        ...
+        Traceback (most recent call last):
         TypeError: div must be a number
 
 Row Size:
@@ -39,8 +41,7 @@ Row Size:
 ::
 	>>> matrix = [[1, 2, 3], [4, 6]]
 	>>> print(matrix_divided(matrix, 2))
-	Trackback (most recent call last)
-	...
+	Traceback (most recent call last):
 	TypeError: Each row of the matrix must have the same size
 
 Zero Equal:
@@ -48,6 +49,5 @@ Zero Equal:
 ::
 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
 	>>> print(matrix_divided(matrix, 0))
-	Trackback (most recent call last)
-	...
-	ZeroDivisionError: division be zero
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
