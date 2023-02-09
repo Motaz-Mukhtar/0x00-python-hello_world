@@ -11,7 +11,7 @@ request('process.argv[2]', (err, response, body) => {
     });
 
     for (const i in arr) {
-      tasksObject[`${count}`] = arr[i].id;
+      tasksObject[`${count}`] = arr[i].userId;
       count++;
     }
   }
