@@ -16,5 +16,4 @@ request(`https://swapi-api.alx-tools.com/api/films/${process.argv[2]}/`, (err, r
       });
     });
   }
-  console.log(filmCharacters);
 });
