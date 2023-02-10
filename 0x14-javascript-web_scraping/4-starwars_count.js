@@ -2,7 +2,7 @@
 
 const request = require('request');
 const count = [];
-const charaUrl = 'https://swapi-api.alx-tools.com/api/people/18';
+const charaUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request(`${process.argv[2]}`, (err, response, body) => {
   body = JSON.parse(body);
