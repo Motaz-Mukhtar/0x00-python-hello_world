@@ -12,7 +12,7 @@ def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
 
-    my_list = text.split(" ")
+    my_list = text.split(' ')
 
     for j in my_list:
         if j.endswith(":") or j.endswith("?") or j.endswith("."):
