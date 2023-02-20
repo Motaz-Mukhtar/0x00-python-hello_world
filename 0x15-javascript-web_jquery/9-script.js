@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-
-$.get('https://fourtonfish.com/hellosalut/?lang=fr', function(data) {
-    console.log(data)
-})
+$.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data) {
+  console.log(data);
+});
